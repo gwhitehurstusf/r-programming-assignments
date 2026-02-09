@@ -1,0 +1,27 @@
+#variables 
+Frequency <- c(0.6,0.3,0.4,0.4,0.2,0.6,0.3,0.4,0.9,0.2)
+BP <- c(103,87,32,42,59,109,78,205,135,176)
+> #variables 
+> Frequency <- c(0.6,0.3,0.4,0.4,0.2,0.6,0.3,0.4,0.9,0.2)
+> BP <- c(103,87,32,42,59,109,78,205,135,176)
+> First <- c(1,1,1,1,0,0,0,0,NA,1)
+> Second <- c(0,0,1,1,0,0,1,1,1,1)
+> FinalDecision <- c(0,1,0,1,0,1,0,1,1,1)
+> 
+> #data.frame
+> hospital <- data.frame(Frequency, BP, First, Second, FinalDecision)
+> str(hospital)
+'data.frame':	10 obs. of  5 variables:
+ $ Frequency    : num  0.6 0.3 0.4 0.4 0.2 0.6 0.3 0.4 0.9 0.2
+ $ BP           : num  103 87 32 42 59 109 78 205 135 176
+ $ First        : num  1 1 1 1 0 0 0 0 NA 1
+ $ Second       : num  0 0 1 1 0 0 1 1 1 1
+ $ FinalDecision: num  0 1 0 1 0 1 0 1 1 1
+> 
+> #boxplot
+> boxplot(hospital$Frequency, hospital$BP,
++         names=c("Frequency","BP"),
++         main="Side-by-Side")
+> 
+> #histogram
+> hist(hospital$BP, main="BP Histogram")
