@@ -1,0 +1,20 @@
+> A <- matrix(1:100, nrow=10)
+> B <- matrix(1:1000, nrow=10)
+> dim(A)
+[1] 10 10
+> dim(B)
+[1]  10 100
+> det(A)
+[1] 0
+> solve(A)
+Error in solve.default(A) : 
+  Lapack routine dgesv: system is exactly singular: U[3,3] = 0
+
+> det(B)
+Error in determinant.matrix(x, logarithm = TRUE, ...) : 
+  'x' must be a square matrix
+
+
+The procedure that I took was simple, following the led instructions at the bottom of the activity. I then looked into the det() function, which is the determinant of the matrix. 
+This allowed me to understand that the determinant of the matrix of A is 0, and the determinant of the matrix of B is not applicable, meaning there it is not a square matrix. 
+The coding above shows the errors from R Studio of the determinant.
