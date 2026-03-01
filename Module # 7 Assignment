@@ -1,0 +1,173 @@
+> #Step1
+> data("HairEyeColor")
+> HEC <- data.frame(HairEyeColor)
+> HEC
+    Hair   Eye    Sex Freq
+1  Black Brown   Male   32
+2  Brown Brown   Male   53
+3    Red Brown   Male   10
+4  Blond Brown   Male    3
+5  Black  Blue   Male   11
+6  Brown  Blue   Male   50
+7    Red  Blue   Male   10
+8  Blond  Blue   Male   30
+9  Black Hazel   Male   10
+10 Brown Hazel   Male   25
+11   Red Hazel   Male    7
+12 Blond Hazel   Male    5
+13 Black Green   Male    3
+14 Brown Green   Male   15
+15   Red Green   Male    7
+16 Blond Green   Male    8
+17 Black Brown Female   36
+18 Brown Brown Female   66
+19   Red Brown Female   16
+20 Blond Brown Female    4
+21 Black  Blue Female    9
+22 Brown  Blue Female   34
+23   Red  Blue Female    7
+24 Blond  Blue Female   64
+25 Black Hazel Female    5
+26 Brown Hazel Female   29
+27   Red Hazel Female    7
+28 Blond Hazel Female    5
+29 Black Green Female    2
+30 Brown Green Female   14
+31   Red Green Female    7
+32 Blond Green Female    8
+> class(HairEyeColor)
+[1] "table"
+> class(HEC)
+[1] "data.frame"
+> summary(HEC)
+    Hair      Eye        Sex          Freq      
+ Black:8   Brown:8   Male  :16   Min.   : 2.00  
+ Brown:8   Blue :8   Female:16   1st Qu.: 7.00  
+ Red  :8   Hazel:8               Median :10.00  
+ Blond:8   Green:8               Mean   :18.50  
+                                 3rd Qu.:29.25  
+                                 Max.   :66.00  
+> head(HEC, 6)
+   Hair   Eye  Sex Freq
+1 Black Brown Male   32
+2 Brown Brown Male   53
+3   Red Brown Male   10
+4 Blond Brown Male    3
+5 Black  Blue Male   11
+6 Brown  Blue Male   50
+> list(HEC, 6)
+[[1]]
+    Hair   Eye    Sex Freq
+1  Black Brown   Male   32
+2  Brown Brown   Male   53
+3    Red Brown   Male   10
+4  Blond Brown   Male    3
+5  Black  Blue   Male   11
+6  Brown  Blue   Male   50
+7    Red  Blue   Male   10
+8  Blond  Blue   Male   30
+9  Black Hazel   Male   10
+10 Brown Hazel   Male   25
+11   Red Hazel   Male    7
+12 Blond Hazel   Male    5
+13 Black Green   Male    3
+14 Brown Green   Male   15
+15   Red Green   Male    7
+16 Blond Green   Male    8
+17 Black Brown Female   36
+18 Brown Brown Female   66
+19   Red Brown Female   16
+20 Blond Brown Female    4
+21 Black  Blue Female    9
+22 Brown  Blue Female   34
+23   Red  Blue Female    7
+24 Blond  Blue Female   64
+25 Black Hazel Female    5
+26 Brown Hazel Female   29
+27   Red Hazel Female    7
+28 Blond Hazel Female    5
+29 Black Green Female    2
+30 Brown Green Female   14
+31   Red Green Female    7
+32 Blond Green Female    8
+
+[[2]]
+[1] 6
+
+> #Step 3
+> #In third and last step, explore if S3 and S4 can be assigned to your data set.
+> #S3
+> hair_s3 <- list(
++   hair = "Black",
++   eye = "Brown",
++   sex = "Male",
++   freq = 32
++ )
+> class(hair_s3) <- "HairEye"
+> hair_s3
+$hair
+[1] "Black"
+
+$eye
+[1] "Brown"
+
+$sex
+[1] "Male"
+
+$freq
+[1] 32
+
+attr(,"class")
+[1] "HairEye"
+> #S4
+> setClass("HairEye",
++          slots = list(
++            hair = "character",
++            eye = "character",
++            sex = "character",
++            freq = "numeric"
++          ))
+> hair_s4 <- new("HairEye",
++                hair = "Black",
++                eye = "Brown",
++                sex = "Male",
++                freq = 32)
+> hair_s4
+An object of class "HairEye"
+Slot "hair":
+[1] "Black"
+
+Slot "eye":
+[1] "Brown"
+
+Slot "sex":
+[1] "Male"
+
+#In your blog, discuss the following questions:
+  
+  #How do you tell what OO system (S3 vs. S4) an object is associated with?
+  #S3 are from the beginning
+  #S4 are developed later, and they always have a second step class association that 
+  # has to be done before the object can be a s4
+  
+  
+  #How do you determine the base type (like integer or list) of an object?
+  #You apply the specific function to the base type to process the object
+  #orientation. 
+  
+  
+  
+  #What is a generic function?
+  #It's a function which dispatches methods. Typially
+  #an encapsulated a "genaric" concept, such as plot, 
+  #mean, logLik, residuals, predicts, summary. 
+  
+  
+  #What are the main differences between S3 and S4?
+  # S3 is simpler, you have the easy access of creating an object
+  # that with S4 you have to create an additional class before
+  # 
+
+
+Slot "freq":
+[1] 32
