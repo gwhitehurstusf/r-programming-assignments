@@ -143,31 +143,5 @@ Slot "eye":
 Slot "sex":
 [1] "Male"
 
-#In your blog, discuss the following questions:
-  
-  #How do you tell what OO system (S3 vs. S4) an object is associated with?
-  #S3 are from the beginning
-  #S4 are developed later, and they always have a second step class association that 
-  # has to be done before the object can be a s4
-  
-  
-  #How do you determine the base type (like integer or list) of an object?
-  #You apply the specific function to the base type to process the object
-  #orientation. 
-  
-  
-  
-  #What is a generic function?
-  #It's a function which dispatches methods. Typially
-  #an encapsulated a "genaric" concept, such as plot, 
-  #mean, logLik, residuals, predicts, summary. 
-  
-  
-  #What are the main differences between S3 and S4?
-  # S3 is simpler, you have the easy access of creating an object
-  # that with S4 you have to create an additional class before
-  # 
-
-
 Slot "freq":
 [1] 32
