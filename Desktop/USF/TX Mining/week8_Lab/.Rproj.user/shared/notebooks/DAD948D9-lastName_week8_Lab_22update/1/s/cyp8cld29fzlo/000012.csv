@@ -1,0 +1,4 @@
+"0","# Write your code below."
+"0","myDF<-as.data.frame(readxl::read_excel(""./data/mlr01.xls""))"
+"0","colnames(myDF) <- c(""nFawn"", ""adultPop"", ""precip"", ""winter"")"
+"0","head(myDF)"

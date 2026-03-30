@@ -1,0 +1,6 @@
+"0","mean(t$Survived[t$Class == ""3rd""] == ""Yes"")  * 100 #32% of third class people survived
+"
+"1","[1]"
+"1"," 25.21246"
+"1","
+"

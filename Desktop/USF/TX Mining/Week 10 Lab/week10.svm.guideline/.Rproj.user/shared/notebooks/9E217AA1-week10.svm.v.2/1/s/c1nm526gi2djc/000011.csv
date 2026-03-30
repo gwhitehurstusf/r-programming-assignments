@@ -1,0 +1,6 @@
+"0","# Write your code below to create training and test datasets.
+  testData <- 
++ airquality1[randIndex[(cutpoint2_3+1):dim(spam)[1]],]
+"
+"2","Error: object 'spam' not found
+"

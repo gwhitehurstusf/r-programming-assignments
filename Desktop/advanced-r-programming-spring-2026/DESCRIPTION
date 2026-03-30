@@ -1,0 +1,10 @@
+Package: Friedman
+Title: Simple Data Analysis Tools
+Version: 0.0.0.9000
+Authors@R: person("Grace", "Whitehurst", email = "gwhitehurst@usf.edu", role = c("aut", "cre"))
+Description: This package provides simple tools for analyzing and visualizing datasets.
+Depends: R (>= 3.1.2)
+Imports: ggplot2, dplyr
+License: CC0
+Encoding: UTF-8
+LazyData: true

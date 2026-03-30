@@ -1,0 +1,36 @@
+"0","svmOutput
+"
+"1","Support Vector Machine object of class ""ksvm"""
+"1"," "
+"1","
+"
+"1","
+"
+"1","SV type: eps-svr"
+"1","  (regression) 
+"
+"1"," parameter : epsilon = 0.1  cost C = 5 
+"
+"1","
+"
+"1","Gaussian Radial Basis kernel function. 
+ Hyperparameter : sigma =  0.158866791908046 
+"
+"1","
+Number of Support Vectors : 124 
+"
+"1","
+Objective Function Value :"
+"1"," "
+"1","-179.8012"
+"1"," "
+"1","
+"
+"1","Training error : 0.259774 
+"
+"1","Cross validation error :"
+"1"," "
+"1","395.7995"
+"1"," "
+"1","
+"
